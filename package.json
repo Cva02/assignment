@@ -1,5 +1,6 @@
 {
-  "name": "gemini-clone",
+  "name": "assignment",
+  "homepage": "https://cva02.github.io/assignment",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

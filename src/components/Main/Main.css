@@ -11,7 +11,7 @@
     justify-content: space-between;
     font-size: 22px;
     padding: 20px;
-    color: #585858;
+    color: #000000;
 }
 
 .main .nav img {
@@ -32,8 +32,24 @@
     padding: 20px;
 }
 
+.search-box textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+  resize: none;
+  line-height: 1.4;
+  color: #333;
+  height: auto;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+
 .main .greet span {
-    background: -webkit-linear-gradient(16deg, #4b90ff,#ff5546);
+    background: -webkit-linear-gradient(16deg, #000000,#000000);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

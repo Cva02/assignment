@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div className='main'>
       <div className="nav">
-        <p>Gemini</p>
+        <p>Inteliq</p>
         <img src={assets.user_icon} alt="" />
       </div>
       <div className="main-container">
@@ -18,7 +18,7 @@ const Main = () => {
          {!showResult
           ? <>
       <div className="greet">
-        <p><span>Hello, Dev.</span></p>
+        <p><span>Hi, Siva.</span></p>
         <p>How can I help you today?</p>
       </div>
       <div className="cards">
@@ -64,15 +64,31 @@ const Main = () => {
         
         <div className="main-bottom">
           <div className="search-box">
-            <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Search for anything...' />
-            <div>
-              <img src={assets.gallery_icon} alt="" />
-              <img src={assets.mic_icon} alt="" />
-              {input?<img onClick={()=>onSent()} src={assets.send_icon} alt="" />:null}
-            </div>
-          </div>
+  <textarea
+    value={input}
+    onChange={(e) => {
+      setInput(e.target.value);
+      e.target.style.height = "auto";
+      e.target.style.height = `${e.target.scrollHeight}px`;
+    }}
+    placeholder="Search for anything..."
+    rows={1}
+    onKeyDown={(e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        onSent();
+      }
+    }}
+  />
+  <div>
+    <img src={assets.gallery_icon} alt="" />
+    <img src={assets.mic_icon} alt="" />
+    {input ? <img onClick={() => onSent()} src={assets.send_icon} alt="" /> : null}
+  </div>
+</div>
+
           <p className='bottom-info'>
-            Gemini is a large multimodal model that can accept images and text as input, and generate text as output. It is designed to be helpful, honest, and harmless.
+            Ai is a large multimodal model that can accept images and text as input, and generate text as output. It is designed to be helpful, honest, and harmless.
           </p>
         </div>
       </div>
